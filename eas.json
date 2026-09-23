@@ -8,8 +8,12 @@
       "developmentClient": true,
       "distribution": "internal"
     },
-    "preview": {
-      "distribution": "internal"
+   "preview": {
+      "distribution": "internal",
+      "env": {
+        "EXPO_PUBLIC_SUPABASE_URL": "https://pgsbznnfynnafcqmkmnc.supabase.co",
+        "EXPO_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_St-AL_IAdpYkdS59Tootww_6rmZgBzr"
+      }
     },
     "production": {
       "autoIncrement": true
