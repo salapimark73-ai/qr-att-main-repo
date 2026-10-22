@@ -1,4 +1,5 @@
 import { useFocusEffect } from 'expo-router';
+<<<<<<< HEAD
 import { useCallback, useMemo, useState } from 'react';
 import { Alert, FlatList, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -6,6 +7,12 @@ import { Badge, Btn, Chip, SearchBar } from '@/components/AdminUI';
 import { COLORS } from '@/constants/colors';
 import { setEventStatus } from '@/lib/admin';
 import { shareCSV } from '@/lib/csv';
+=======
+import { useCallback, useState } from 'react';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
+
+import { COLORS } from '@/constants/colors';
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
 import { useAuth } from '@/lib/auth';
 import {
   getAttendanceHistory,
@@ -21,8 +28,11 @@ export default function HistoryScreen() {
   const [role, setRole] = useState<Role | null>(null);
   const [studentRecords, setStudentRecords] = useState<AttendanceRecord[]>([]);
   const [teacherEvents, setTeacherEvents] = useState<TeacherEventAttendance[]>([]);
+<<<<<<< HEAD
   const [q, setQ] = useState('');
   const [range, setRange] = useState<'all' | 'month'>('all');
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
 
   const load = useCallback(async () => {
     if (!user) {
@@ -53,6 +63,7 @@ export default function HistoryScreen() {
     }, [load])
   );
 
+<<<<<<< HEAD
   const term = q.trim().toLowerCase();
 
   const shownStudent = useMemo(() => {
@@ -114,6 +125,8 @@ export default function HistoryScreen() {
     );
   };
 
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
   if (role === 'teacher') {
     return (
       <View style={styles.container}>
@@ -126,6 +139,7 @@ export default function HistoryScreen() {
             No events yet. Create one in the Teacher tab.
           </Text>
         ) : (
+<<<<<<< HEAD
           <>
           <Text style={styles.summary}>
             {teacherEvents.length} event(s) · {totalAttendees} total attendance
@@ -142,6 +156,10 @@ export default function HistoryScreen() {
                 onPress={() => exportEvents(teacherEvents, 'All attendance')}
               />
             }
+=======
+          <FlatList
+            data={teacherEvents}
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
             keyExtractor={(item) => item.eventId}
             contentContainerStyle={styles.list}
             renderItem={({ item }) => (
@@ -156,6 +174,7 @@ export default function HistoryScreen() {
                 {item.startTime && (
                   <Text style={styles.eventMeta}>{formatDate(item.startTime)}</Text>
                 )}
+<<<<<<< HEAD
                 <View style={{ marginTop: 6 }}>
                   <Badge
                     label={item.status === 'open' ? 'Open' : 'Closed'}
@@ -180,6 +199,8 @@ export default function HistoryScreen() {
                     />
                   </View>
                 </View>
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
 
                 {item.attendees.length > 0 && (
                   <View style={styles.attendeeList}>
@@ -199,7 +220,10 @@ export default function HistoryScreen() {
               </View>
             )}
           />
+<<<<<<< HEAD
           </>
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
         )}
       </View>
     );
@@ -216,6 +240,7 @@ export default function HistoryScreen() {
           No records yet. Scan a QR code to register your attendance.
         </Text>
       ) : (
+<<<<<<< HEAD
         <>
         <Text style={styles.summary}>
           {studentRecords.length} event(s) attended · {shownStudent.length} shown
@@ -228,6 +253,10 @@ export default function HistoryScreen() {
         <FlatList
           data={shownStudent}
           ListEmptyComponent={<Text style={styles.subtitle}>No matching records.</Text>}
+=======
+        <FlatList
+          data={studentRecords}
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
           keyExtractor={(item) => String(item.id)}
           contentContainerStyle={styles.list}
           renderItem={({ item }) => (
@@ -238,7 +267,10 @@ export default function HistoryScreen() {
             </View>
           )}
         />
+<<<<<<< HEAD
         </>
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
       )}
     </View>
   );
@@ -275,6 +307,7 @@ const styles = StyleSheet.create({
   list: {
     paddingBottom: 24,
   },
+<<<<<<< HEAD
   summary: {
     fontSize: 13,
     color: COLORS.textSecondary,
@@ -285,6 +318,8 @@ const styles = StyleSheet.create({
     gap: 8,
     marginTop: 4,
   },
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
   card: {
     backgroundColor: COLORS.card,
     borderRadius: 14,

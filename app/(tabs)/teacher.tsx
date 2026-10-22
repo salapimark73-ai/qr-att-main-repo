@@ -242,7 +242,10 @@ export default function TeacherScreen() {
             value={editTarget === 'start' ? startDate : endDate}
             mode={isAndroid ? editingPart : 'datetime'}
             display={isAndroid ? 'default' : 'spinner'}
+<<<<<<< HEAD
             themeVariant="dark"
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
             onChange={onPickerChange}
           />
         </View>

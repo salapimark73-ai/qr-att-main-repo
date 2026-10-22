@@ -21,7 +21,10 @@ export type TeacherEventAttendance = {
   title: string;
   startTime: string | null;
   endTime: string | null;
+<<<<<<< HEAD
   status: 'open' | 'closed';
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
   attendeeCount: number;
   attendees: {
     studentId: string;
@@ -132,7 +135,11 @@ export async function getTeacherEventAttendance(
 ): Promise<TeacherEventAttendance[]> {
   const { data: events, error: eventError } = await supabase
     .from('events')
+<<<<<<< HEAD
     .select('*')
+=======
+    .select('id, event_code, title, start_time, end_time')
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
     .eq('created_by', teacherId)
     .order('created_at', { ascending: false });
 
@@ -173,7 +180,10 @@ export async function getTeacherEventAttendance(
       title: e.title,
       startTime: e.start_time,
       endTime: e.end_time,
+<<<<<<< HEAD
       status: e.status === 'closed' ? 'closed' : 'open',
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
       attendeeCount: rows.length,
       attendees: rows.map((a: any) => ({
         studentId: a.student_id,

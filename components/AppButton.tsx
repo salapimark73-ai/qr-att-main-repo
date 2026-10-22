@@ -1,8 +1,14 @@
 import Ionicons from '@expo/vector-icons/Ionicons';
+<<<<<<< HEAD
 import { LinearGradient } from 'expo-linear-gradient';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 import { COLORS, GOLD_EDGE, GOLD_GRADIENT, GOLD_LOCATIONS } from '@/constants/colors';
+=======
+import { Pressable, StyleSheet, Text, View } from 'react-native';
+
+import { COLORS } from '@/constants/colors';
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
 
 type Props = {
   title: string;
@@ -18,11 +24,16 @@ export default function AppButton({ title, icon, theme, onPress, disabled }: Pro
       <View
         style={[
           styles.buttonOuter,
+<<<<<<< HEAD
           { borderWidth: 1, borderColor: GOLD_EDGE, borderRadius: 10 },
+=======
+          { borderWidth: 1, borderColor: COLORS.primary, borderRadius: 10 },
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
           disabled && styles.disabled,
         ]}
       >
         <Pressable
+<<<<<<< HEAD
           style={[styles.buttonInner, { overflow: 'hidden' }]}
           onPress={onPress}
           disabled={disabled}
@@ -34,6 +45,12 @@ export default function AppButton({ title, icon, theme, onPress, disabled }: Pro
             end={{ x: 1, y: 1 }}
             style={StyleSheet.absoluteFill}
           />
+=======
+          style={[styles.buttonInner, { backgroundColor: COLORS.primary }]}
+          onPress={onPress}
+          disabled={disabled}
+        >
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
           <Ionicons
             name={icon}
             size={22}

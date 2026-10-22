@@ -70,17 +70,25 @@ export default function ProfileScreen() {
             <ActivityIndicator color={COLORS.primary} />
           ) : (
             <>
+<<<<<<< HEAD
               {profile?.role === 'admin' ? (
                 <View style={[styles.roleBadge, { backgroundColor: COLORS.danger }]}>
                   <Text style={[styles.roleBadgeText, { color: '#FFFFFF' }]}>Administrator</Text>
                 </View>
               ) : profile?.role === 'teacher' ? (
+=======
+              {profile?.role === 'teacher' ? (
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
                 <View style={styles.roleBadge}>
                   <Text style={styles.roleBadgeText}>Teacher</Text>
                 </View>
               ) : (
                 <View style={[styles.roleBadge, styles.roleBadgeStudent]}>
+<<<<<<< HEAD
                   <Text style={[styles.roleBadgeText, { color: COLORS.textPrimary }]}>Student</Text>
+=======
+                  <Text style={styles.roleBadgeText}>Student</Text>
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
                 </View>
               )}
 

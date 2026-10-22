@@ -6,14 +6,22 @@
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "qr-attendance",
+<<<<<<< HEAD
     "userInterfaceStyle": "dark",
+=======
+    "userInterfaceStyle": "light",
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
+<<<<<<< HEAD
         "backgroundColor": "#0B0B0B",
+=======
+        "backgroundColor": "#E6F4FE",
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
@@ -34,13 +42,26 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
+<<<<<<< HEAD
           "backgroundColor": "#0B0B0B"
+=======
+          "backgroundColor": "#ffffff"
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
         }
       ],
       "expo-sqlite",
       "@react-native-community/datetimepicker",
+<<<<<<< HEAD
       "expo-secure-store"
     ],
+=======
+      "expo-image",
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "reactCompiler": true
+    },
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
     "extra": {
       "router": {},
       "eas": {
@@ -48,4 +69,8 @@
       }
     }
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e

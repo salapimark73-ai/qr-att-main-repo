@@ -1,6 +1,10 @@
 import { supabase } from './supabase';
 
+<<<<<<< HEAD
 export type Role = 'student' | 'teacher' | 'admin';
+=======
+export type Role = 'student' | 'teacher';
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
 
 export type Profile = {
   id: string;

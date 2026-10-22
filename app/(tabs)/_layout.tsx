@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Redirect, Tabs, useSegments } from 'expo-router';
 import { ActivityIndicator, View } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -29,6 +30,15 @@ export default function TabLayout() {
   return (
     <>
     {adminNeedsRedirect && <Redirect href="/(tabs)/admin" />}
+=======
+import { Tabs } from 'expo-router';
+import Ionicons from '@expo/vector-icons/Ionicons';
+
+import { COLORS } from '@/constants/colors';
+
+export default function TabLayout() {
+  return (
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: COLORS.primary,
@@ -42,6 +52,7 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
+<<<<<<< HEAD
         name="admin"
         options={{
           title: 'Admin',
@@ -60,6 +71,10 @@ export default function TabLayout() {
         name="index"
         options={{
           ...hideForAdmin,
+=======
+        name="index"
+        options={{
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
           title: 'Home',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
@@ -73,7 +88,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name="scan"
         options={{
+<<<<<<< HEAD
           ...hideScan,
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
           title: 'Scan',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
@@ -87,7 +105,10 @@ export default function TabLayout() {
       <Tabs.Screen
         name="history"
         options={{
+<<<<<<< HEAD
           ...hideForAdmin,
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
           title: 'History',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
@@ -101,7 +122,10 @@ export default function TabLayout() {
       <Tabs.Screen
     name="teacher"
     options={{
+<<<<<<< HEAD
     ...hideTeacher,
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
     title: 'Teacher',
     tabBarIcon: ({ color, focused }) => (
       <Ionicons
@@ -126,6 +150,9 @@ export default function TabLayout() {
         }}
       />
     </Tabs>
+<<<<<<< HEAD
     </>
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
   );
 }

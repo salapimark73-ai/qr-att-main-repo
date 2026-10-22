@@ -167,7 +167,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   scanResult: { fontSize: 14, textAlign: 'center', marginBottom: 8, fontWeight: '600' },
+<<<<<<< HEAD
   success: { color: '#7FD18B' },
   error: { color: '#FF6B63' },
+=======
+  success: { color: '#2E7D32' },
+  error: { color: '#C62828' },
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
   scanData: { fontSize: 12, color: COLORS.textSecondary, textAlign: 'center', marginBottom: 12 },
 });

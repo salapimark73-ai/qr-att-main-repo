@@ -15,8 +15,11 @@ export type CloudEvent = {
   end_time: string | null;
   created_by: string | null;
   created_at: string;
+<<<<<<< HEAD
   status?: 'open' | 'closed';
   venue?: string | null;
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
 };
 
 export async function createEvent(
@@ -68,6 +71,7 @@ export async function getEventByCode(
 
   return data as CloudEvent;
 }
+<<<<<<< HEAD
 
 // Events a student can still check in to: not closed and not finished yet.
 export async function getOpenEvents(): Promise<CloudEvent[]> {
@@ -85,3 +89,5 @@ export async function getOpenEvents(): Promise<CloudEvent[]> {
       (!e.end_time || new Date(e.end_time).getTime() >= now)
   );
 }
+=======
+>>>>>>> 65bf6a200c5b27c1ecdc112e2c943375defdf48e
